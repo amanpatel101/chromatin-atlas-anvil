@@ -18,14 +18,12 @@ task run_shap {
 		#create data directories and download scripts
 		cd /; mkdir my_scripts
 		cd /my_scripts
-		git clone --depth 1 --branch v1.6.5 https://github.com/viramalingam/tf-atlas-pipeline.git
-		chmod -R 777 tf-atlas-pipeline
-		cd tf-atlas-pipeline/anvil/shap/
+		git clone --depth 1 --branch master https://github.com/kundajelab/chrombpnet.git
 
 		##shap
 
-		echo "run /my_scripts/tf-atlas-pipeline/anvil/shap/shap_pipeline.sh" ${experiment} ${input_json} ${reference_file} ${reference_file_index} ${chrom_sizes} ${chroms_txt} ${sep=',' bigwigs} ${peaks} ${sep=',' model}
-		/my_scripts/tf-atlas-pipeline/anvil/shap/shap_pipeline.sh ${experiment} ${input_json} ${reference_file} ${reference_file_index} ${chrom_sizes} ${chroms_txt} ${sep=',' bigwigs} ${peaks} ${sep=',' model}
+		echo "python /my_scripts/chrombpnet/chrombpnet/evaluation/interpret.py -g ${reference_file} -r ${regions} -m ${model} -o /project/shap_dir_peaks/${experiment}"
+		python /my_scripts/chrombpnet/chrombpnet/evaluation/interpret.py -g ${reference_file} -r ${regions} -m ${model} -o /project/shap_dir_peaks/${experiment} 
 
 		echo "copying all files to cromwell_root folder"
 		

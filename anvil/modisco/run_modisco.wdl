@@ -14,14 +14,14 @@ task run_modisco {
 		#create data directories and download scripts
 		cd /; mkdir my_scripts
 		cd /my_scripts
-		git clone --depth 1 --branch v1.6.11 https://github.com/viramalingam/tf-atlas-pipeline.git
-		chmod -R 777 tf-atlas-pipeline
-		cd tf-atlas-pipeline/anvil/modisco/
+		git clone --depth 1 --branch v1.6.11 https://github.com/viramalingam/chromatin-atlas-anvil.git
+		chmod -R 777 chromatin-atlas-anvil
+		cd chromatin-atlas-anvil/anvil/modisco/
 
 		##modisco
 
-		echo "run /my_scripts/tf-atlas-pipeline/anvil/modisco/modisco_pipeline.sh" ${experiment} ${sep=',' shap} ${max_seqlets}
-		/my_scripts/tf-atlas-pipeline/anvil/modisco/modisco_pipeline.sh ${experiment} ${sep=',' shap} ${max_seqlets}
+		echo "run /my_scripts/chromatin-atlas-anvil/anvil/modisco/modisco_pipeline.sh" ${experiment} ${sep=',' shap} ${max_seqlets}
+		/my_scripts/chromatin-atlas-anvil/anvil/modisco/modisco_pipeline.sh ${experiment} ${sep=',' shap} ${max_seqlets}
 
 		echo "copying all files to cromwell_root folder"
 		
