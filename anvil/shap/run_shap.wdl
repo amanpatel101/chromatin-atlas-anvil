@@ -61,7 +61,6 @@ workflow shap {
 		input:
 			experiment = experiment,
 			reference_file = reference_file,
-			reference_file_index = reference_file_index,
 			peaks = peaks,
 			model = model
  	}
