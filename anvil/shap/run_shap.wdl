@@ -68,7 +68,7 @@ workflow shap {
 	output {
 		File counts_shap_scores = "${experiment}.counts_scores.h5"
 		File profile_shap_scores = "${experiment}.profile_scores.h5"
-		File interpreted_regions.bed = "${experiment}.interpreted_regions.bed"
+		File interpreted_regions = "${experiment}.interpreted_regions.bed"
 		
 	}
 }
