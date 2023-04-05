@@ -24,7 +24,7 @@ task run_shap {
 		
 		cp -r /project/shap_dir_peaks/${experiment}.counts_scores.h5 /cromwell_root/${experiment}.counts_scores.h5
 		cp -r /project/shap_dir_peaks/${experiment}.profile_scores.h5 /cromwell_root/${experiment}.profile_scores.h5
-		cp -r /project/shap_dir_peaks/${experiment}.interpreted_regions.bed /cromwell_root/${experiment}.interpreted_regions.bed
+		cp -r /project/shap_dir_peaks/${experiment}.interpreted_regions /cromwell_root/${experiment}.interpreted_regions.bed
 	}
 	
 	output {
