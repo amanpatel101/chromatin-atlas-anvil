@@ -17,8 +17,8 @@ task run_shap {
 
 		##shap
 
-		echo "python /my_scripts/chrombpnet/chrombpnet/evaluation/interpret.py -g ${reference_file} -r ${peaks} -m ${model} -o /project/shap_dir_peaks/${experiment}"
-		python /my_scripts/chrombpnet/chrombpnet/evaluation/interpret.py -g ${reference_file} -r ${peaks} -m ${model} -o /project/shap_dir_peaks/${experiment} 
+		echo "python /my_scripts/chrombpnet/chrombpnet/evaluation/interpret/interpret.py -g ${reference_file} -r ${peaks} -m ${model} -o /project/shap_dir_peaks/${experiment}"
+		python /my_scripts/chrombpnet/chrombpnet/evaluation/interpret/interpret.py -g ${reference_file} -r ${peaks} -m ${model} -o /project/shap_dir_peaks/${experiment} 
 
 		echo "copying all files to cromwell_root folder"
 		
