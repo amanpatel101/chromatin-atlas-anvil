@@ -13,6 +13,7 @@ task run_shap {
 		#create data directories and download scripts
 		cd /; mkdir my_scripts
 		cd /my_scripts
+		mkdir /project/shap_dir_peaks/
 		git clone --depth 1 --branch master https://github.com/kundajelab/chrombpnet.git
 
 		##shap
