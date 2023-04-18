@@ -40,10 +40,10 @@ task run_shap {
 
 	runtime {
 		docker: 'kundajelab/chrombpnet:latest'
-		memory: 30 + "GB"
+		memory: 50 + "GB"
 		bootDiskSizeGb: 50
 		disks: "local-disk 100 HDD"
-		gpuType: "nvidia-tesla-k80"
+		gpuType: "nvidia-tesla-v100"
 		gpuCount: 1
 		nvidiaDriverVersion: "450.51.05" 
 		maxRetries: 1
